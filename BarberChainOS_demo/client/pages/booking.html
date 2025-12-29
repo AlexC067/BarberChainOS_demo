@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book an Appointment — BarberChainOS Demo</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">BarberChainOS <span class="muted">Public Booking</span></div>
+    <nav class="nav">
+      <a href="../index.html">Admin</a>
+      <a href="booking.html" class="active">Booking</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Book an appointment</h1>
+      <p class="muted">Demo flow: choose location → barber → service → time. This would be branded per shop.</p>
+
+      <form id="publicBookingForm" class="grid2">
+        <label>Location
+          <select id="pLocation" required></select>
+        </label>
+        <label>Barber
+          <select id="pBarber" required></select>
+        </label>
+        <label>Service
+          <select id="pService" required></select>
+        </label>
+        <label>Start time (local)
+          <input id="pStartTime" type="datetime-local" required />
+        </label>
+
+        <label>Your name
+          <input id="pName" required />
+        </label>
+        <label>Phone
+          <input id="pPhone" placeholder="+1 416..." />
+        </label>
+        <label>Email
+          <input id="pEmail" type="email" placeholder="you@email.com" />
+        </label>
+        <label>Notes
+          <input id="pNotes" placeholder="e.g., low fade, beard sensitive skin" />
+        </label>
+
+        <button type="submit">Request booking</button>
+        <div id="pMsg" class="msg"></div>
+      </form>
+
+      <p class="muted small">In production: deposit payment, cancellation policy, and confirmations via SMS/WhatsApp.</p>
+    </section>
+  </main>
+
+  <script src="../assets/public.js"></script>
+</body>
+</html>
